@@ -27,12 +27,12 @@
 		// minimum
 		const NUMBERS = [1,2,3,5,8,13,21];
 
-		let count = 0;
+		let index = 0;
 		const box = document.querySelector('.box');
-		box.textContent = NUMBERS[count];
+		box.textContent = NUMBERS[index];
 		box.addEventListener('click',()=>{
-			if(++count >= NUMBERS.length) count = 0;
-			box.textContent = NUMBERS[count];
+			if(++index >= NUMBERS.length) index = 0;
+			box.textContent = NUMBERS[index];
 		});
 		
 	</script>
