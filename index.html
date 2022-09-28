@@ -6,25 +6,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Planning Poker</title>
 	<style>
-		.num{
+		.container{
 			font-size: 50vw;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			user-select:none;
-		}		
+			height: 100vh;
+		}
 	</style>
 </head>
 <body>
-	<div class="num">13</div>
+	<div class="container">
+		<div class="box">13</div>
+	</div>
 	<script>
 		const NUMBERS = [0,1,2,3,5,8,11,19,"∞"];
 		let count = 0;
-		const numDiv = document.querySelector('.num');
-		numDiv.textContent = NUMBERS[count];
-		numDiv.addEventListener('click',()=>{
+		const box = document.querySelector('.box');
+		box.textContent = NUMBERS[count];
+		box.addEventListener('click',()=>{
 			if(++count >= NUMBERS.length) count = 0;
-			numDiv.textContent = NUMBERS[count];
+			box.textContent = NUMBERS[count];
 		});
 		
 	</script>
